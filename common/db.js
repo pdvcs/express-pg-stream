@@ -17,6 +17,12 @@ async function query (query, params) {
   return rows
 }
 
+async function client () {
+  const client = await pool.connect()
+  return client
+}
+
 module.exports = {
-  query
+  query,
+  client
 }
